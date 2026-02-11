@@ -1,0 +1,4 @@
+{
+    "clangd.path": "/usr/bin/clangd",
+    "vim.useSystemClipboard": true
+}
