@@ -1,4 +1,133 @@
 {
     "clangd.path": "/usr/bin/clangd",
-    "vim.useSystemClipboard": true
+    "vim.useSystemClipboard": true,
+    "psi-header.variables": [
+    [
+      "author",
+      "JiansongShen"
+    ],
+    [
+      "email",
+      "jason.shen111@outlook.com"
+    ],
+    [
+      "github",
+      "https://github.com/Jiansongshen"
+    ]
+  ],
+  "psi-header.lang-config": [
+    // 前端：JS/TS/Vue/React (jsx fallback to js)
+    {
+      "language": "javascript",
+      "prefix": "// ",
+      "begin": "",
+      "end": ""
+    },
+    {
+      "language": "typescript",
+      "prefix": "// ",
+      "begin": "",
+      "end": ""
+    },
+    {
+      "language": "vue",
+      "prefix": "// ",
+      "begin": "",
+      "end": ""
+    },
+    // 后端：Java/Kotlin/Go
+    {
+      "language": "java",
+      "prefix": "// ",
+      "begin": "",
+      "end": ""
+    },
+    {
+      "language": "kotlin",
+      "prefix": "// ",
+      "begin": "",
+      "end": ""
+    },
+    {
+      "language": "go",
+      "prefix": "// ",
+      "begin": "",
+      "end": ""
+    },
+    // 机器学习：C/C++/Python/Assembly
+    {
+      "language": "cpp",
+      "prefix": "// ",
+      "begin": "",
+      "end": ""
+    },
+    {
+      "language": "c",
+      "prefix": "// ",
+      "begin": "",
+      "end": ""
+    },
+    {
+      "language": "python",
+      "prefix": "# ",
+      "begin": "",
+      "end": ""
+    },
+    {
+      "language": "asm", // Assembly (VSCode ID: asm)
+      "prefix": "# ",
+      "begin": "",
+      "end": ""
+    },
+    {
+      "language": "rust",
+      "prefix": "// ",
+      "begin": "",
+      "end": ""
+    }
+  ],
+  // 模板定义（关键：纯内容，无 // 前缀；移除 Updated 静态行）
+  "psi-header.templates": [
+    {
+      "language": "*", // 改为具体语言，避免 * 默认块注释
+      "template": [
+        "Copyright (c) <<year>> <<author>>",
+        "",
+        "Licensed under the Apache License, Version 2.0 (the \"License\");",
+        "you may not use this file except in compliance with the License.",
+        "You may obtain a copy of the License at",
+        "",
+        "    https://www.apache.org/licenses/LICENSE-2.0",
+        "",
+        "Unless required by applicable law or agreed to in writing, software",
+        "distributed under the License is distributed on an \"AS IS\" BASIS,",
+        "WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",
+        "See the License for the specific language governing permissions and",
+        "limitations under the License.",
+        "",
+        "Email: <<email>>",
+        "GitHub: <<github>>",
+        "",
+        "Created: <<filecreated('YYYY-MM-DD HH:mm:ss')>> by <<author>>",
+        "Updated: ",
+        ""
+      ]
+    }
+  ],
+  // 变更跟踪（添加 modDate 匹配 "Updated: " 行；日期格式大写）
+  "psi-header.changes-tracking": {
+  
+    "isActive": true,
+    "modDate": "Updated: ", // 匹配并替换此标签后的日期
+    "modDateFormat": "YYYY-MM-DD HH:mm:ss",
+    "modAuthor": "by <<author>>",
+    "autoHeader": "autoSave" // 保存时自动插入/更新；若无效，改为 "manualSave"
+  },
+  // 其他配置（不变）
+  "psi-header.config": {
+    "forceToTop": true,
+    "blankLinesAfter": 1
+  },
+  "psi-header.license-reference": {},
+ 
 }
